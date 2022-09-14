@@ -1,11 +1,12 @@
 import './Sidebar.css'
+import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import logo from '../../assests/OnePort365-logo.png'
 import { SidebarMenu } from '../../MenuList'
-import { useState } from 'react'
 
 const Sidebar = () => {
-  const [selected, setSelected] = useState(0)
+  const location = useLocation()
+
   return (
     <div className="sidebar-menu">
       <div className="logo">
@@ -19,13 +20,14 @@ const Sidebar = () => {
                 <Link
                   to={items.links}
                   className={
-                    selected === index ? 'menuLink active' : 'menuLink'
+                    location.pathname === items.links
+                      ? 'menuLink active'
+                      : 'menuLink'
                   }
-                  onClick={() => setSelected(index)}
                 >
                   <div
                     className={
-                      selected === index
+                      location.pathname === items.links
                         ? 'sidebar-icons active'
                         : 'sidebar-icons'
                     }

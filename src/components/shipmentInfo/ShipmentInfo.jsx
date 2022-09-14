@@ -22,8 +22,8 @@ const ShipmentInfo = ({ shippingData }) => {
       </div>
       <table className="shipping-tbl">
         <tbody>
-          {shippingData.map((item) => (
-            <tr key={item.id}>
+          {shippingData.map((item, index) => (
+            <tr key={index}>
               <td>
                 <div className="arrup-icon">
                   <FiArrowUpRight className="icon" />

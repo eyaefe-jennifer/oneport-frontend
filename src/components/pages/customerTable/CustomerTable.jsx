@@ -1,11 +1,7 @@
 import './CustomerTable.css'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const CustomerTable = ({ customerData }) => {
-  const navigate = useNavigate()
-  const handleShipment = () => {
-    navigate('shipmentcustomer')
-  }
   return (
     <div className="customerTable">
       <table className="customer-tbl">
@@ -21,8 +17,8 @@ const CustomerTable = ({ customerData }) => {
               <td>{item.phone}</td>
               <td>{item.ip_address}</td>
               <td>
-                <button className="btn-ship" onClick={handleShipment}>
-                  Shipments
+                <button className="btn-ship">
+                  <Link to={`/customer/${item.id}`}> Shipments</Link>
                 </button>
               </td>
               <td>

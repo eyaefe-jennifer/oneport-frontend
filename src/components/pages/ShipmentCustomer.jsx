@@ -9,6 +9,71 @@ import axios from 'axios'
 
 const ShipmentCustomer = () => {
   const [data, setData] = useState([])
+  const [temData, setTemData] = useState([])
+
+  function handleShipmentType(evt) {
+    let newShipment
+    if (evt.target.value !== '') {
+      newShipment = temData.filter((shipment) => {
+        if (shipment.shipping_type === evt.target.value) {
+          return shipment
+        }
+      })
+    } else {
+      newShipment = temData
+    }
+
+    setData(newShipment)
+  }
+
+  function compareOtherProps(query, shipment) {
+    if (
+      String(shipment.origin_port_code).toLocaleLowerCase().includes(query) ||
+      String(shipment.origin_port_city).toLocaleLowerCase().includes(query) ||
+      String(shipment.origin_port_country)
+        .toLocaleLowerCase()
+        .includes(query) ||
+      String(shipment.destination_port_code)
+        .toLocaleLowerCase()
+        .includes(query) ||
+      String(shipment.destination_port_city)
+        .toLocaleLowerCase()
+        .includes(query) ||
+      String(shipment.destination_port_country)
+        .toLocaleLowerCase()
+        .includes(query) ||
+      String(shipment._id).toLocaleLowerCase().includes(query)
+    ) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function handleOtherSearch(evt) {
+    const searchWord = String(evt.target.value).toLocaleLowerCase()
+
+    const newShipment = temData.filter((shipment) => {
+      if (compareOtherProps(searchWord, shipment)) {
+        return shipment
+      }
+    })
+
+    setData(newShipment)
+  }
+
+  function handleDateChange(evt) {
+    // will retrieve the shipment whose pickup date is greater than the selected date
+    var selected_date = new Date(evt.target.value)
+
+    const newShipment = temData.filter((shipment) => {
+      var shipment_date = new Date(shipment.shipment_pickup_date)
+      if (selected_date.getTime() <= shipment_date.getTime()) {
+        return shipment
+      }
+    })
+    setData(newShipment)
+  }
 
   useEffect(() => {
     const fetchdatas = async () => {
@@ -16,9 +81,10 @@ const ShipmentCustomer = () => {
         'https://demo3522726.mockable.io/get_single_customer_shipments/123456789',
       )
       setData(res.data)
+      setTemData(res.data)
     }
     fetchdatas()
-  }, [data])
+  }, [])
 
   return (
     <div className="shipment">
@@ -44,24 +110,32 @@ const ShipmentCustomer = () => {
           <button>Add New Shipment +</button>
         </div>
         <div className="shipment-type">
-          <select name="" id="">
+          <select
+            name=""
+            id=""
+            onChange={handleShipmentType}
+            value="shipping_type"
+          >
             <option value="Shipment Type">Shipment Type</option>
-            <option value="Import">Import</option>
-            <option value="Export">Export</option>
+            <option value="import">Import</option>
+            <option value="export">Export</option>
           </select>
         </div>
         <div className="shipment-date">
-          <select name="" id="">
-            <option value="Shipment Date">Shipment Date</option>
-          </select>
+          <input type="" onChange={handleDateChange} />
         </div>
         <div className="seach-input">
           <span>
             <AiOutlineSearch />
           </span>
-          <input type="text" placeholder="search by shipment ID,Destination" />
+          <input
+            type="text"
+            placeholder="search by shipment ID,Destination"
+            onChange={handleOtherSearch}
+          />
         </div>
       </div>
+
       <ShipmentInfo shippingData={data} />
     </div>
   )

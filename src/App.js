@@ -21,7 +21,7 @@ function App() {
               <Route path="/admin" element={<Admin />} />
               <Route path="/customer" element={<Customer />} />
               <Route
-                path="/customer/shipmentcustomer"
+                path="/customer/:customerId"
                 element={<ShipmentCustomer />}
               />
               <Route path="/shipment" element={<Shipments />} />
