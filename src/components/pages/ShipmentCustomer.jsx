@@ -2,6 +2,7 @@ import './ShipmentCustomer.css'
 import Header from '../header/Header'
 import { BsArrowLeft } from 'react-icons/bs'
 import { AiOutlineSearch } from 'react-icons/ai'
+import { BiChevronDown } from 'react-icons/bi'
 import img from '../../assests/profilePix2.png'
 import ShipmentInfo from '../shipmentInfo/ShipmentInfo'
 import { useState, useEffect } from 'react'
@@ -11,13 +12,11 @@ const ShipmentCustomer = () => {
   const [data, setData] = useState([])
   const [temData, setTemData] = useState([])
 
-  function handleShipmentType(evt) {
+  function handleShipmentType(e) {
     let newShipment
-    if (evt.target.value !== '') {
+    if (e.target.value !== '') {
       newShipment = temData.filter((shipment) => {
-        if (shipment.shipping_type === evt.target.value) {
-          return shipment
-        }
+        return shipment.shipping_type === e.target.value
       })
     } else {
       newShipment = temData
@@ -54,9 +53,7 @@ const ShipmentCustomer = () => {
     const searchWord = String(evt.target.value).toLocaleLowerCase()
 
     const newShipment = temData.filter((shipment) => {
-      if (compareOtherProps(searchWord, shipment)) {
-        return shipment
-      }
+      return compareOtherProps(searchWord, shipment)
     })
 
     setData(newShipment)
@@ -68,9 +65,7 @@ const ShipmentCustomer = () => {
 
     const newShipment = temData.filter((shipment) => {
       var shipment_date = new Date(shipment.shipment_pickup_date)
-      if (selected_date.getTime() <= shipment_date.getTime()) {
-        return shipment
-      }
+      return selected_date.getTime() <= shipment_date.getTime()
     })
     setData(newShipment)
   }
@@ -122,12 +117,16 @@ const ShipmentCustomer = () => {
           </select>
         </div>
         <div className="shipment-date">
-          <input type="" onChange={handleDateChange} />
+          <input
+            type="date"
+            onChange={handleDateChange}
+            placeholder="shipment date"
+          />
+          <BiChevronDown className="chev-down" />
         </div>
         <div className="seach-input">
-          <span>
-            <AiOutlineSearch />
-          </span>
+          <AiOutlineSearch color="#6b7280" fontSize={18} />
+
           <input
             type="text"
             placeholder="search by shipment ID,Destination"

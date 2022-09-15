@@ -1,11 +1,11 @@
-import Header from '../header/Header'
-import './Shipment.css'
+import Header from '../../header/Header'
+import '../../pages/Shipment.css'
 import { BsArrowLeft } from 'react-icons/bs'
 import { FiArrowUpRight } from 'react-icons/fi'
-import img from '../../assests/Frame 460.png'
-import ShippingTab from '../shippingTab/ShippingTab'
+import img from '../../../assests/Frame 460.png'
+import ShippingTab from '../../shippingTab/ShippingTab'
 
-const Shipments = () => {
+const ImportShipments = () => {
   return (
     <>
       <Header title="Shipments" />
@@ -13,7 +13,7 @@ const Shipments = () => {
         <div className="more-Info">
           <div className="icon">
             <div className="left-icon">
-              <BsArrowLeft fontSize={22} className="leftIcon" />
+              <BsArrowLeft fontSize={22} />
             </div>
             <h3>Shipment Details</h3>
           </div>
@@ -27,7 +27,7 @@ const Shipments = () => {
             <div className="icon-wrapper">
               <FiArrowUpRight className="icon" />
             </div>
-            <h3>Export</h3>
+            <h3>Import</h3>
           </div>
           <div className="date">
             <h5>Apr 02, 2022</h5>
@@ -58,4 +58,4 @@ const Shipments = () => {
   )
 }
 
-export default Shipments
+export default ImportShipments

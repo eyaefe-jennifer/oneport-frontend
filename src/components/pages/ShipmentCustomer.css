@@ -1,5 +1,5 @@
 .shipment .shipment-content {
-  margin-left: 112px;
+  margin-left: 50px;
   margin-top: 79px;
 }
 .shipment-content .userProfile {
@@ -52,7 +52,7 @@
   align-items: center;
   flex-direction: row;
   margin-top: 42px;
-  margin-left: 112px;
+  margin-left: 50px;
 }
 .types-of-shipment .add-shipment button {
   font-weight: 500;
@@ -80,15 +80,58 @@
 .types-of-shipment .seach-input {
   margin-left: 120px;
 }
-.types-of-shipment .seach-input input {
+
+.shipment-date {
+  padding: 10px 24px;
+  width: 191px;
+  height: 56px;
+  border: 1px solid #d1d5db;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f4f6;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 6px;
+}
+.shipment-date .chev-down {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #374151;
+}
+.shipment-date input {
+  border: none;
+  outline: none;
+  width: 130px;
+  margin-left: -10px;
+  background: #f3f4f6;
+}
+.shipment-date input::placeholder {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #374151;
+}
+
+.types-of-shipment .seach-input {
   width: 250px;
   height: 56px;
   background: #ffffff;
   border: 1px solid #d1d5db;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.types-of-shipment .seach-input input {
+  border: none;
   outline: none;
 }
+
 .types-of-shipment .seach-input input::placeholder {
   text-align: center;
   font-weight: 400;
@@ -96,11 +139,85 @@
   line-height: 20px;
   color: #9ca3af;
 }
-.types-of-shipment .seach-input span {
-  margin-right: -20px;
-  position: absolute;
-  bottom: 190px;
-  margin-left: 12px;
-  font-size: 18px;
-  color: #6b7280;
+
+@media only screen and (max-width: 600px) {
+  .shipment .shipment-content {
+    margin-left: -5px;
+    margin-top: 30px;
+  }
+
+  .shipment-content .userProfile {
+    display: flex;
+    flex-direction: column;
+    background: #f9fafb;
+    justify-content: flex-start;
+    width: 320px;
+    height: 200px;
+  }
+  .shipment-content .userProfile img {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: -250px;
+  }
+  .shipment-content .userProfile .usersDetails h6 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-left: -112px;
+  }
+
+  .shipment-content .usersDetails p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    margin-left: -112px;
+  }
+  .shipment-content .edit-btn button {
+    position: relative;
+    left: 120px;
+    top: -80px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .shipment .types-of-shipment {
+    display: grid;
+    align-items: left;
+    flex-direction: column;
+    grid-template-columns: 200px 200px;
+    margin-top: 32px;
+    margin-left: -5px;
+  }
+
+  .types-of-shipment .add-shipment button {
+    width: 145px;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  .types-of-shipment select {
+    width: 155px;
+    margin-bottom: 20px;
+    margin-left: -40px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .shipment-date {
+    width: 150px;
+  }
+
+  .types-of-shipment .seach-input {
+    width: 160px;
+    margin-left: -40px;
+  }
+
+  .types-of-shipment .seach-input input {
+    width: 120px;
+  }
+
+  .types-of-shipment .seach-input input::placeholder {
+    font-size: 10px;
+  }
 }

@@ -9,7 +9,7 @@ const CustomerTable = ({ customerData }) => {
           {customerData.map((item) => (
             <tr key={item.id}>
               <td>
-                <img src={item.Avatar} alt="" />
+                <img src={item.Avatar} alt="" height={30} width={0} />
               </td>
               <td>{item.first_name} </td>
               <td>{item.last_name}</td>
@@ -17,9 +17,9 @@ const CustomerTable = ({ customerData }) => {
               <td>{item.phone}</td>
               <td>{item.ip_address}</td>
               <td>
-                <button className="btn-ship">
-                  <Link to={`/customer/${item.id}`}> Shipments</Link>
-                </button>
+                <Link to={`/customer/${item.id}`}>
+                  <button className="btn-ship">Shipments</button>
+                </Link>
               </td>
               <td>
                 <button className="btn-edit">Edit</button>

@@ -25,16 +25,19 @@ const Customer = () => {
       </div>
       <div className="mainContent">
         <div className="btn-add">
+          <h2>Customer</h2>
           <button>Add customer +</button>
         </div>
-        <div className="tbhead">
-          <h6>first name</h6>
-          <h6>last name</h6>
-          <h6>email address</h6>
-          <h6>phone number</h6>
-          <h6>last login</h6>
+        <div className="tab-container">
+          <div className="tbhead">
+            <h6>first name</h6>
+            <h6>last name</h6>
+            <h6>email address</h6>
+            <h6>phone number</h6>
+            <h6>last login</h6>
+          </div>
+          <CustomerTable customerData={data} />
         </div>
-        <CustomerTable customerData={data} />
       </div>
     </div>
   )

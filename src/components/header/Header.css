@@ -5,7 +5,7 @@
   align-items: center;
   padding: 0px 80px;
   height: 100px;
-  margin-left: -10px;
+  margin-left: -30px;
   border-bottom: 1px solid #e5e7eb;
   background: #ffffff;
 }
@@ -19,7 +19,6 @@
   align-items: center;
   letter-spacing: -0.02em;
   color: #000000;
-  padding-left: 50px;
 }
 
 .Header .notify {
@@ -55,8 +54,6 @@
   align-items: center;
 }
 .Header .notifyTxt h3 {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
@@ -64,4 +61,45 @@
   color: #374151;
   margin-right: 12px;
   margin-left: 7px;
+}
+.Header .logo {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .Header {
+    width: 400px;
+    justify-content: space-between;
+    margin-left: -80px;
+  }
+
+  .Header .logo {
+    display: flex;
+    flex-direction: row;
+  }
+  .Header .logo img {
+    width: 70px;
+    margin-right: 35px;
+    margin-left: 5px;
+  }
+  .Header .title h2 {
+    display: none;
+  }
+
+  .Header .notify .notifyIcon {
+    margin-left: 30px;
+  }
+  .Header .notify .notifyLogo {
+    left: 8px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .Header .notify img {
+    width: 30px;
+    margin-left: -20px;
+  }
+  .Header .notifyTxt h3 {
+    font-size: 14px;
+  }
 }

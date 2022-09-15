@@ -5,6 +5,7 @@ import Customer from './components/pages/Customer'
 import ShipmentCustomer from './components/pages/ShipmentCustomer'
 import Shipments from './components/pages/Shipment'
 import Admin from './components/pages/Admin'
+import ImportShipments from './components/pages/import/ImportShipment'
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
                 element={<ShipmentCustomer />}
               />
               <Route path="/shipment" element={<Shipments />} />
+              <Route
+                path="/shipment/shipmentImport"
+                element={<ImportShipments />}
+              />
               <Route path="/tracking" element={<h2>tracking</h2>} />
               <Route path="/docs" element={<h2>Documents</h2>} />
               <Route path="/rates" element={<h2>Documents</h2>} />
