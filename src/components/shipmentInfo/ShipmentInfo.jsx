@@ -4,8 +4,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import img from '../../assests/Frame 460.png'
 import { useNavigate } from 'react-router-dom'
 
-const ShipmentInfo = ({ shippingData, category }) => {
-  console.log(category)
+const ShipmentInfo = ({ shippingData }) => {
   const navigate = useNavigate()
 
   const handleNavigation = (navLink) => {
@@ -15,14 +14,6 @@ const ShipmentInfo = ({ shippingData, category }) => {
       navigate('/shipment/shipmentImport')
     }
   }
-
-  // const handleDetails = () => {
-  //   if (category === 'export') {
-  //     navigate('/shipment')
-  //   } else {
-  //     navigate('/importshipment')
-  //   }
-  // }
 
   return (
     <div className="shippingInfos">
@@ -35,47 +26,41 @@ const ShipmentInfo = ({ shippingData, category }) => {
       </div>
       <table className="shipping-tbl">
         <tbody>
-          {shippingData.map(
-            (item, index) => (
-              console.log(item),
-              (
-                <tr key={index}>
-                  <td>
-                    <div className="arrup-icon">
-                      <FiArrowUpRight className="icon" />
-                    </div>
-                  </td>
-                  <td>{item.shipping_type}</td>
-                  <td>
-                    {item.origin_port_code}
-                    <p>
-                      {item.state}, {item.origin_port_country}
-                    </p>
-                  </td>
-                  <td>
-                    <img src={img} alt="" width={80} />
-                  </td>
-                  <td>
-                    {item.destination_port_code}
-                    <p>
-                      {item.destination_port_city},{' '}
-                      {item.destination_port_country}
-                    </p>
-                  </td>
-                  <td>{item.shipment_pickup_date}</td>
-                  <td>{item._id}</td>
-                  <td>
-                    <button
-                      className="btn-view"
-                      onClick={() => handleNavigation(item.shipping_type)}
-                    >
-                      view Details
-                    </button>
-                  </td>
-                </tr>
-              )
-            ),
-          )}
+          {shippingData.map((item, index) => (
+            <tr key={index}>
+              <td>
+                <div className="arrup-icon">
+                  <FiArrowUpRight className="icon" />
+                </div>
+              </td>
+              <td>{item.shipping_type}</td>
+              <td>
+                {item.origin_port_code}
+                <p>
+                  {item.state}, {item.origin_port_country}
+                </p>
+              </td>
+              <td>
+                <img src={img} alt="" width={80} />
+              </td>
+              <td>
+                {item.destination_port_code}
+                <p>
+                  {item.destination_port_city}, {item.destination_port_country}
+                </p>
+              </td>
+              <td>{item.shipment_pickup_date}</td>
+              <td>{item._id}</td>
+              <td>
+                <button
+                  className="btn-view"
+                  onClick={() => handleNavigation(item.shipping_type)}
+                >
+                  view Details
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
