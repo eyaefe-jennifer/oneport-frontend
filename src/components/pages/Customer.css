@@ -62,33 +62,4 @@
     font-weight: 600;
     font-size: 14px;
   }
-  .tab-container {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    width: 300px;
-  }
-  .customer .tbhead {
-    display: block;
-    margin-left: 10px;
-  }
-  .customer .tbhead h6 {
-    font-size: 10px;
-    width: 300px;
-    color: #000000;
-  }
-
-  .customer .tbhead h6:nth-child(1) {
-    padding-bottom: 75px;
-  }
-  .customer .tbhead h6:nth-child(2) {
-    padding-bottom: 35px;
-  }
-  .customer .tbhead h6:nth-child(3) {
-    padding-bottom: 35px;
-  }
-  .customer .tbhead h6:nth-child(4) {
-    padding-bottom: 35px;
-  }
 }

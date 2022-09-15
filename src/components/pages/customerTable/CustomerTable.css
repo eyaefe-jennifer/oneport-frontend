@@ -45,47 +45,4 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .customerTable .customer-tbl,
-  .customerTable .customer-tbl tbody,
-  .customerTable .customer-tbl td {
-    display: block;
-    width: 180px;
-  }
-
-  .customerTable .customer-tbl tbody {
-    border-collapse: separate;
-    border-spacing: 0 20px;
-    height: 100%;
-    margin-left: -240px;
-    border: none;
-  }
-
-  .customerTable .customer-tbl td img {
-    margin-top: -40px;
-  }
-  .customerTable .customer-tbl tbody tr:hover {
-    background: none;
-  }
-  .customerTable .customer-tbl td:nth-child(1) {
-    padding: 0 10px;
-    border-bottom: none;
-    height: 0px;
-  }
-
-  .customerTable .customer-tbl td {
-    height: 40px;
-    padding: 8px;
-    font-size: 12px;
-  }
-  .customerTable .customer-tbl tbody .btn-ship {
-    padding: 5px;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 15px;
-  }
-
-  .customerTable .customer-tbl tbody .btn-edit {
-    font-size: 10px;
-    line-height: 10px;
-  }
 }

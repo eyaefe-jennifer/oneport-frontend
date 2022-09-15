@@ -95,3 +95,10 @@
   line-height: 20px;
   color: #6b7280;
 }
+
+@media only screen and (max-width: 600px) {
+  .shipping-tab {
+    margin-left: 0px;
+    margin-top: 51px;
+  }
+}
