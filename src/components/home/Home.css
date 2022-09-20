@@ -1,0 +1,11 @@
+.AppGlass {
+  display: grid;
+  height: 97%;
+  width: 100%;
+  grid-template-columns: 280px auto;
+}
+.app-sidebar {
+  background-color: #fff;
+  border-right: 1px solid #e5e7eb;
+  height: auto;
+}

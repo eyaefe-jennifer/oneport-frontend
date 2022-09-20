@@ -10,7 +10,7 @@
   display: grid;
   height: 97%;
   width: 100%;
-  grid-template-columns: 13rem auto;
+  grid-template-columns: 300px auto;
 }
 
 .appElements {
