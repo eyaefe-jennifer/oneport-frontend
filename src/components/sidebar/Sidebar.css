@@ -42,7 +42,6 @@
   display: grid;
   place-items: center;
   margin-right: 18px;
-  margin-left: 20px;
 }
 .Menu-list .links .list-items {
   flex: 70%;
