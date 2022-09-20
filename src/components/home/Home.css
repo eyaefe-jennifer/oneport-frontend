@@ -9,3 +9,8 @@
   border-right: 1px solid #e5e7eb;
   height: auto;
 }
+@media only screen and (max-width: 600px) {
+  .app-sidebar {
+    display: none;
+  }
+}

@@ -67,9 +67,10 @@
 
 @media only screen and (max-width: 600px) {
   .Header {
-    width: 400px;
+    width: 500px;
     justify-content: space-between;
-    margin-left: -80px;
+    margin-left: -50px;
+    height: 60px;
   }
 
   .Header .logo {
@@ -86,7 +87,7 @@
   }
 
   .Header .notify .notifyIcon {
-    margin-left: 30px;
+    margin-left: 50px;
   }
   .Header .notify .notifyLogo {
     left: 8px;
@@ -94,11 +95,23 @@
     height: 15px;
   }
 
+  .Header .notify-logo img {
+    display: none;
+  }
   .Header .notify img {
     width: 30px;
     margin-left: -20px;
   }
+  .Header .notifyTxt {
+    margin-right: 15px;
+  }
   .Header .notifyTxt h3 {
-    font-size: 14px;
+    font-size: 12px;
+    margin-left: -20px;
+    margin-right: 2px;
+  }
+  .Header .chevUp {
+    font-size: 8px;
+    margin-bottom: 5px;
   }
 }

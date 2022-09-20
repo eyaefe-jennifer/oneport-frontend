@@ -29,13 +29,6 @@ const Customer = () => {
           <button>Add customer +</button>
         </div>
         <div className="tab-container">
-          <div className="tbhead">
-            <h6>first name</h6>
-            <h6>last name</h6>
-            <h6>email address</h6>
-            <h6>phone number</h6>
-            <h6>last login</h6>
-          </div>
           <CustomerTable customerData={data} />
         </div>
       </div>

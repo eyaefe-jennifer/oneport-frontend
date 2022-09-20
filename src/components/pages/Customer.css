@@ -16,50 +16,23 @@
   border: none;
 }
 
-.customer .tbhead {
-  display: flex;
-  flex-direction: row;
-  margin-left: 50px;
-  margin-bottom: 11px;
-}
-.customer .tbhead h6 {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #6b7280;
-}
-.customer .tbhead h6:nth-child(1) {
-  padding-right: 65px;
-}
-.customer .tbhead h6:nth-child(2) {
-  padding-right: 20px;
-}
-.customer .tbhead h6:nth-child(3) {
-  padding-right: 145px;
-}
-.customer .tbhead h6:nth-child(4) {
-  padding-right: 85px;
-}
-
 @media only screen and (max-width: 600px) {
   .customer .btn-add {
-    margin: 15px 0px 41px 2px;
+    margin: 15px 0px 41px 30px;
   }
   .btn-add h2 {
     display: block;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     color: #000000;
   }
 
   .customer .btn-add button {
-    margin-top: 45px;
-    padding: 8px 14px;
+    margin-top: 5px;
+    padding: 5px 8px;
     background: #3ab44a;
     border-radius: 6px;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 12px;
   }
 }

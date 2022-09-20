@@ -37,7 +37,7 @@ const Header = ({ title }) => {
           <img src={TemocLogo} alt="" className="temocImg" />
           <div className="notifyTxt">
             <h3>Temoc</h3>
-            <BsChevronDown fontSize={10} />
+            <BsChevronDown fontSize={10} className="chevUp" />
           </div>
         </div>
       </div>
