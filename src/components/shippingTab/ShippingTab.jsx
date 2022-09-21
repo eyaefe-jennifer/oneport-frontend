@@ -71,7 +71,7 @@ const ShippingTab = () => {
             id="nav-documents"
             role="tabpanel"
             aria-labelledby="nav-documents-tab"
-            tabindex="0"
+            tabIndex="0"
           >
             <div className="docs">
               <h3>Upload Documents</h3>
@@ -117,7 +117,7 @@ const ShippingTab = () => {
             id="nav-details"
             role="tabpanel"
             aria-labelledby="nav-details-tab"
-            tabindex="0"
+            tabIndex="0"
           >
             Cargo details
           </div>
@@ -126,7 +126,7 @@ const ShippingTab = () => {
             id="nav-services"
             role="tabpanel"
             aria-labelledby="nav-services-tab"
-            tabindex="0"
+            tabIndex="0"
           >
             hello
           </div>
@@ -135,7 +135,7 @@ const ShippingTab = () => {
             id="nav-rates"
             role="tabpanel"
             aria-labelledby="nav-rates-tab"
-            tabindex="0"
+            tabIndex="0"
           >
             hello
           </div>

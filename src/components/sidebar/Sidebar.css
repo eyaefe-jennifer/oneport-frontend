@@ -1,3 +1,6 @@
+.sideBar-menu {
+  position: fixed;
+}
 .sideBar-menu .logo {
   margin-left: 33px;
   margin-top: 41px;
@@ -8,7 +11,7 @@
 }
 
 .Menu-list .links {
-  height: 60px;
+  height: 55px;
   width: 100%;
   text-decoration: none;
   display: flex;

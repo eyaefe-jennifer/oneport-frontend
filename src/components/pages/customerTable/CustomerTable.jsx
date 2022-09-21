@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom'
 const CustomerTable = ({ customerData }) => {
   return (
     <div className="customerTable">
-      <div className="tbhead">
-        <h6>first name</h6>
-        <h6>last name</h6>
-        <h6>email address</h6>
-        <h6>phone number</h6>
-        <h6>last login</h6>
-      </div>
       <table className="customer-tbl">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th></th>
+            <th>Last Name</th>
+            <th>email address</th>
+            <th>phone number</th>
+            <th>last login</th>
+          </tr>
+        </thead>
         <tbody>
           {customerData.map((item) => (
             <tr key={item.id}>

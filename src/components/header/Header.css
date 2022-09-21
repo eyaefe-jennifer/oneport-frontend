@@ -65,9 +65,9 @@
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .Header {
-    width: 500px;
+    width: 400px;
     justify-content: space-between;
     margin-left: -50px;
     height: 60px;
