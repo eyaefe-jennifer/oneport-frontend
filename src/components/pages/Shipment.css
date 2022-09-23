@@ -125,10 +125,10 @@
 
 @media only screen and (max-width: 600px) {
   .shipments-details {
-    margin-left: -10px;
+    margin-left: 10px;
   }
   .shipments-details .more-Info {
-    width: 500px;
+    width: 35px;
     margin-top: 10px;
   }
 
@@ -138,12 +138,14 @@
     padding: 0 3px;
   }
   .shipments-details .icon .leftIcon {
-    font-size: 12px;
+    font-size: 5px;
   }
   .shipments-details .icon h3 {
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 12px;
     margin-left: 12px;
+    width: 100px;
   }
   .shipments-details .invoice-btn {
     display: grid;
@@ -153,7 +155,7 @@
     padding: 5px;
     font-size: 12px;
     line-height: 14px;
-    margin-right: 170px;
+    margin-left: 60px;
     margin-bottom: 10px;
   }
 
@@ -163,9 +165,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 40px;
-    width: 320px;
+    width: 290px;
     height: 100px;
     margin-top: 30px;
+    margin-left: 8px;
   }
 
   .export-details .icon-arr {
@@ -179,41 +182,46 @@
     height: 24px;
     font-size: 20px;
     padding: 2px;
+    margin-left: -20px;
   }
 
   .export-details .icon-arr h3 {
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 13px;
   }
 
   .export-details h5 {
     margin-left: 10px;
-    font-size: 12px;
+    font-size: 10px;
   }
   .export-details p {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 18px;
     margin-left: 10px;
   }
 
   .export-Info {
-    width: 320px;
+    width: 290px;
     height: 168px;
+    margin-left: 8px;
   }
   .export-Info p {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 18px;
-    margin-left: -10px;
   }
   .export-Info h2 {
-    margin-left: -10px;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 18px;
   }
   .export-Info h6 {
-    font-size: 12px;
+    font-size: 8px;
   }
   .export-Info .img-direction {
-    padding: 5px;
+    padding: 8px 5px;
+  }
+  .export-Info .img-direction img {
+    width: 60px;
+
+    margin-top: 30px;
   }
 }

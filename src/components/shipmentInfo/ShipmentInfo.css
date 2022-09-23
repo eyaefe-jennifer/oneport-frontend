@@ -1,36 +1,21 @@
 .shippingInfos .shipping-tbl {
   border-collapse: collapse;
   width: 1040px;
-  margin-top: 12px;
-  margin-left: 52px;
+  margin-top: 44px;
+  margin-left: 42px;
   margin-bottom: 200px;
 }
-.shippingInfos .tblTitle {
-  display: flex;
-  flex-direction: row;
-  margin-top: 54px;
-  margin-left: 55px;
-}
-.shippingInfos .tblTitle h6 {
+
+.shippingInfos thead th {
   font-weight: 600;
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #6b7280;
+  width: 115px;
 }
-.shippingInfos .tblTitle h6:nth-child(1) {
-  padding-right: 45px;
-}
-.shippingInfos .tblTitle h6:nth-child(2) {
-  padding-right: 120px;
-}
-.shippingInfos .tblTitle h6:nth-child(3) {
-  padding-right: 115px;
-}
-.shippingInfos .tblTitle h6:nth-child(4) {
-  padding-right: 100px;
-}
+
 .shipping-tbl tbody tr {
   border: 1px solid #e5e7eb;
   border-radius: 8px;
@@ -41,16 +26,13 @@
 }
 
 .shipping-tbl td:nth-child(2) {
-  padding-right: 15px;
+  /* padding-right: 10px; */
   text-transform: capitalize;
-}
-.shipping-tbl td:nth-child(5) {
-  padding-left: 20px;
 }
 
 .shipping-tbl td {
   border-bottom: 1px solid #e5e7eb;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 14px;
   color: #000000;
 }
@@ -86,10 +68,61 @@
   border: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .sidebar .shipping-tbl {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-height: 100vh;
+@media only screen and (max-width: 760px) {
+  .shippingInfos .shipping-tbl thead,
+  tbody,
+  th,
+  td {
+    display: block;
+    width: 320px;
+  }
+
+  .shippingInfos .shipping-tbl {
+    margin-left: 25px;
+  }
+
+  .shippingInfos .shipping-tbl thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .shippingInfos .shipping-tbl td img {
+    -ms-transform: rotate(55deg);
+    -ms-transform-origin: 20% 40%;
+    transform: rotate(90deg);
+    transform-origin: 20% 40%;
+    width: 40px;
+  }
+
+  .shippingInfos .shipping-tbl td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 40%;
+    font-size: 12px;
+    height: 50px;
+  }
+  .shippingInfos .shipping-tbl td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  .shippingInfos .shipping-tbl td:nth-of-type(2):before {
+    content: 'Shipment Type';
+  }
+  .shippingInfos .shipping-tbl td:nth-of-type(3):before {
+    content: 'origin';
+  }
+  .shippingInfos .shipping-tbl td:nth-of-type(5):before {
+    content: 'destination';
+  }
+  .shippingInfos .shipping-tbl td:nth-of-type(6):before {
+    content: 'Shipment Date';
+  }
+  .shippingInfos .shipping-tbl td:nth-of-type(7):before {
+    content: 'Shiping id';
   }
 }

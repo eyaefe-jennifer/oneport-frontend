@@ -87,7 +87,7 @@ const ShipmentCustomer = () => {
         <Header title="Shipments" />
       </div>
       <div className="shipment-content">
-        <BsArrowLeft fontSize={24} />
+        <BsArrowLeft fontSize={24} className="icon-user" />
         <div className="userProfile">
           <img src={img} alt="" />
           <div className="usersDetails">

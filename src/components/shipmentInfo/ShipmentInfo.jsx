@@ -17,14 +17,18 @@ const ShipmentInfo = ({ shippingData }) => {
 
   return (
     <div className="shippingInfos">
-      <div className="tblTitle">
-        <h6>Shipment Type</h6>
-        <h6>origin</h6>
-        <h6>destination</h6>
-        <h6>Shipment Date</h6>
-        <h6>Shiping id</h6>
-      </div>
       <table className="shipping-tbl">
+        <thead>
+          <tr>
+            <th>Shipment Type</th>
+            <th></th>
+            <th>origin</th>
+            <th></th>
+            <th>destination</th>
+            <th>Shipment Date</th>
+            <th>Shiping id</th>
+          </tr>
+        </thead>
         <tbody>
           {shippingData.map((item, index) => (
             <tr key={index}>

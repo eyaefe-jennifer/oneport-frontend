@@ -54,12 +54,19 @@
 }
 
 @media only screen and (max-width: 760px) {
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
+  .customerTable .customer-tbl thead {
+    display: block;
+  }
+  .customerTable .customer-tbl tbody {
+    display: block;
+  }
+  .customerTable .customer-tbl th {
+    display: block;
+  }
+  .customerTable .customer-tbl td {
+    display: block;
+  }
+  .customerTable .customer-tbl tr {
     display: block;
   }
   .customerTable .customer-tbl tbody {
@@ -72,7 +79,7 @@
     margin-left: 20px;
   }
   /* Hide table headers (but not display: none;, for accessibility) */
-  thead tr {
+  .customerTable thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
@@ -83,33 +90,34 @@
     height: 25px;
   }
 
-  td {
+  .customerTable td {
     border: none;
     border-bottom: 0.5px solid #eee;
     position: relative;
     padding-left: 50%;
+    z-index: 1;
   }
 
-  td:before {
+  .customerTable td:before {
     position: absolute;
     left: 6px;
     white-space: nowrap;
     font-size: 10px;
   }
 
-  td:nth-of-type(2):before {
+  .customerTable td:nth-of-type(2):before {
     content: 'First Name';
   }
-  td:nth-of-type(3):before {
+  .customerTable td:nth-of-type(3):before {
     content: 'Last Name';
   }
-  td:nth-of-type(4):before {
+  .customerTable td:nth-of-type(4):before {
     content: 'email address';
   }
-  td:nth-of-type(5):before {
+  .customerTable td:nth-of-type(5):before {
     content: 'phone number';
   }
-  td:nth-of-type(6):before {
+  .customerTable td:nth-of-type(6):before {
     content: 'last login';
   }
 
