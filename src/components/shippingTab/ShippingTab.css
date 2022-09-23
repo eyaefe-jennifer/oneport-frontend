@@ -179,4 +179,10 @@
     font-size: 12px;
     line-height: 14px;
   }
+
+  .del-Icon {
+    left: 50px;
+    color: rgb(219, 17, 17);
+    font-size: 14px;
+  }
 }
